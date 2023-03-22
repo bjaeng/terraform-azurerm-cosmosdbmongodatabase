@@ -1,5 +1,5 @@
 locals {
-  name = var.override_name == null ? "${var.system_name}-${lower(var.environment)}-cosmon" : var.override_name
+  name = var.override_name == null ? "${var.system_name}-${lower(var.environment)}-mongodb" : var.override_name
 
   cosmosdb_mongo_database = concat(azurerm_cosmosdb_mongo_database.cosmosdb_mongo_database[*], [null])[0]
 }
